@@ -1,0 +1,81 @@
+/* input.css */
+@custom-variant dark (&:where(.dark, .dark *));
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    background-color: #a09a9a;
+    color: #333;
+    line-height: 1.6;   
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+/* ESTILIZANDO DIV NAV*/
+#nav{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+/* =============================
+   Customizações adicionais para o tema
+   ============================= */
+
+/* Suavizar transições entre dark e light */
+body, section, div, footer, header {
+  transition: background-color 0.4s ease, color 0.4s ease, box-shadow 0.3s ease;
+}
+
+/* Sombra personalizada para Light Mode */
+.light-card {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  border-radius: 0.75rem; /* arredondamento extra */
+}
+
+/* Para escurecer suavemente sombras no hover */
+.light-card:hover {
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+}
+
+/* Dark Mode mantém visual flat */
+.dark .light-card {
+  box-shadow: none;
+}
+
+/* Botões mais suaves no hover */
+button {
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  transform: translateY(-2px);
+}
+
+
+/* Correção de alinhamento dos cards */
+.services, .pricing, .projects, .cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem; /* espaço entre cards */
+}
+
+/* Sombras no tema claro */
+.light .service-card,
+.light .price-card,
+.light .project-card {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+.light .service-card:hover,
+.light .price-card:hover,
+.light .project-card:hover {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+  transform: translateY(-2px);
+}
